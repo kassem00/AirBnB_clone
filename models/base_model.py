@@ -14,7 +14,6 @@ class BaseModel:
         if len(kwargs) != 0:
             format_data ='%Y-%m-%dT%H:%M:%S.%f'
             for key, val in kwargs.items():
-                print("> {}\n".format(kwargs[key]))
                 #  if key != '__class__':
                 #     setattr(self, key, val)
                 if key == "created_at" or key == "updated_at":
