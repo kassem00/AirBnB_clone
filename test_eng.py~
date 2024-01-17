@@ -1,0 +1,6 @@
+import models.engine.file_storage
+
+
+t =file_storage
+
+print(t.all())

@@ -1,0 +1,62 @@
+#!/bin/python3
+
+import difflib
+import sys
+import os
+from termcolor import colored
+"""
+comper your code with alx needs 
+you must save example output in temp for every example
+i am working in method that can automet this so good luck (O U O)
+
+USAGE:
+./yourprogram | ./comper yourcode_output becarefull
+
+"""
+def comper_two_files(f_1:str, f_2:str="temp.text"):
+    with open(f_1) as fp_1:
+        fp_1_content = fp_1.readlines()
+    fp_1.close()
+    with open(f_2) as fp_2:
+        fp_2_content = fp_2.readlines()
+    fp_2.close()
+
+    li_fi_1 = len(fp_1_content)
+    li_fi_2 = len(fp_2_content)
+
+    if li_fi_1 > li_fi_2:
+        comp = li_fi_2
+        print("Attention !!! your code have less lines !!!\n!!compering untill reach end of your code output!!")
+        flag = "less"
+    elif li_fi_1 < li_fi_2:
+        comp = li_fi_1
+        print("Attention !!! your code have more lines !!!\n!!compering untill reach end of ALX example requirment!!")
+        flag = "more"
+    else:
+        comp = li_fi_1
+        print("Normal compering mode")
+
+    for i in range(0, comp):
+        try:
+            if fp_1_content[i] == fp_2_content[i]:
+                print(colored(f"[line[{i}] ]",'green'))
+                print(f"{fp_1_content[i]}",end="")
+                print(f"{fp_2_content[i][:-1]} <=== your code output")
+                print(colored("matched O v O \n",'green'))
+            else:
+                print(colored(f"[line[{i}] ] / ! \ ",'red'))
+                print(f"{fp_1_content[i]}",end="")
+                print(f"{fp_2_content[i][:-1]} <=== your code output")
+                print(colored(f"NOT Matched !!O ~ O!!\n",'red'))
+        except IndexError:
+            if flag == "less":
+                print(f"your code less by {li_fi_2 - li_fi_1} lines")
+            if flag == "more":
+                print(f"you code have {li_fi_1 - li_fi_2} lines more")
+
+
+with open("temp.text",'w') as tfp:
+    for line in sys.stdin:
+        tfp.write(line)
+    tfp.close()
+comper_two_files(sys.argv[1])

@@ -11,17 +11,19 @@ class BaseModel:
         self.id = str(uuid4())
         self.created_at = datetime.today()
         self.updated_at = datetime.today()
-        
         if len(kwargs) != 0:
             format_data ='%Y-%m-%dT%H:%M:%S.%f'
             for key, val in kwargs.items():
+                print("> {}\n".format(kwargs[key]))
                 #  if key != '__class__':
-                #     setattr(self, key, val)                    
+                #     setattr(self, key, val)
                 if key == "created_at" or key == "updated_at":
                     self.__dict__[key] = datetime.strptime(val,format_data)
                 else:
                     self.__dict__[key] = val
-         
+        else:
+        
+            models.storage.new(self)
 
     def save(self):
         """Update the 'updated_at' attribute with the current datetime."""
@@ -47,5 +49,5 @@ class BaseModel:
     def __str__(self):
         """Return the string representation of the object."""
         return "[{}] ({}) {}".format(
-            self.__class__.__name__, self.id, str(self.to_dict())
+            self.__class__.__name__, self.id, self.__dict__
         )

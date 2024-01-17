@@ -1,0 +1,19 @@
+818c85c6-6bd8-4ebb-b86f-bf83142c3ca9
+[BaseModel] (818c85c6-6bd8-4ebb-b86f-bf83142c3ca9) {'id': '818c85c6-6bd8-4ebb-b86f-bf83142c3ca9', 'created_at': '2024-01-11T18:17:48.125963', 'updated_at': '2024-01-11T18:17:48.125987', 'name': 'My_First_Model', 'my_number': 89, '__class__': 'BaseModel'}
+<class 'datetime.datetime'>
+-----------------------------------------------------------------------
+{'id': '818c85c6-6bd8-4ebb-b86f-bf83142c3ca9', 'created_at': '2024-01-11T18:17:48.125963', 'updated_at': '2024-01-11T18:17:48.125987', 'name': 'My_First_Model', 'my_number': 89, '__class__': 'BaseModel'}
+JSON of my_model:
+	id: (<class 'str'>) - 818c85c6-6bd8-4ebb-b86f-bf83142c3ca9
+	created_at: (<class 'str'>) - 2024-01-11T18:17:48.125963
+	updated_at: (<class 'str'>) - 2024-01-11T18:17:48.125987
+	name: (<class 'str'>) - My_First_Model
+	my_number: (<class 'int'>) - 89
+	__class__: (<class 'str'>) - BaseModel
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+818c85c6-6bd8-4ebb-b86f-bf83142c3ca9
+[BaseModel] (818c85c6-6bd8-4ebb-b86f-bf83142c3ca9) {'id': '818c85c6-6bd8-4ebb-b86f-bf83142c3ca9', 'created_at': '2024-01-11T18:17:48.125963', 'updated_at': '2024-01-11T18:17:48.125987', 'name': 'My_First_Model', 'my_number': 89, '__class__': 'BaseModel'}
+<class 'datetime.datetime'>
+--
+False
