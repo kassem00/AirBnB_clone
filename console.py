@@ -6,6 +6,8 @@ import cmd
 class HBNBCommand(cmd.Cmd):
     """ cmd main class """
 
+    prompt = '(hbnb) '  # Setting the custom prompt
+
     def do_quit(self, arg):
         """ Quit command to exit the program."""
         return True
