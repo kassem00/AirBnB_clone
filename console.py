@@ -16,5 +16,8 @@ class HBNBCommand(cmd.Cmd):
     def help_quit(self):
         print("Quit command to exit the program")
 
+    def emptyline():
+        """ do nothing if user enter empty line """
+        return cmd.Cmd.emptyline(self)
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
