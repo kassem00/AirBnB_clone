@@ -18,6 +18,10 @@ class HBNBCommand(cmd.Cmd):
     def help_quit(self):
         print("Quit command to exit the program")
 
+            
+    def help_EOF(self):
+        print("exit signal Quit command interpretor ")
+
     def emptyline(self):
         """ do nothing if user enter empty line """
         pass
