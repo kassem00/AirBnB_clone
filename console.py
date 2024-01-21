@@ -6,11 +6,11 @@ import cmd
 class HBNBCommand(cmd.Cmd):
     """ cmd main class """
 
-    def do_quit(self, line):
+    def do_quit(self, arg):
         """ quit function """
         return True
     
-    def do_EOF(self, line):
+    def do_EOF(self, arg):
         """ quit function """
         return True
     
